@@ -1,0 +1,135 @@
+body {
+	font-family: Microsoft JhengHei;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(174deg, #FFD370 2%, #FFD370 46%, #FFFFFF 46%, #FFFFFF 100%, #E8E8E8 100%);
+	background-attachment: fixed;
+	letter-spacing: 0.7px;
+}
+
+.mb-8 {
+	margin-bottom: 8px;
+}
+
+.container {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.title {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 24px;
+	color: $mainColor;
+	font-weight: bold;
+	margin-top: 48px;
+	margin-bottom: 26px;
+}
+
+.addInput {
+	width: 500px;
+	position: relative;
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+    .todo{
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        padding: 15px 20px;
+    }
+    .addTodoList {
+        background: $mainColor;
+        color: white;
+        position: absolute;
+        padding: 10px;
+        top: 5px;
+        right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.content {
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    .content-filter {
+        display: flex;
+        justify-content: space-between;
+        .filter {
+            display: block;
+            color: $secondColor;
+            text-decoration: none;
+            padding: 16px 63px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .filter:hover, .active {
+            color: $mainColor;
+            border-bottom: 2px solid black;
+        }
+    }
+    .content-todoList {
+        margin: 16px 24px;
+        li{
+            display: flex;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 5px auto;
+            p {
+                width: 90%;
+                padding: 5px 15px;
+                border-bottom: 1px solid #EFEFEF;
+                cursor: default;
+            }
+            .square, .check, .cross {
+                font-size: 20px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                display: block;
+                cursor: pointer;
+            }
+            .check {
+                color: #FFD370;
+            }
+            .cross {
+                display: none;
+            }
+        }
+        li:hover .cross {
+            display: block;
+        }
+        .isCheck p {
+            text-decoration: line-through;
+            color: rgba(51, 51, 51, 0.30);
+        }
+    }
+  
+    .content-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 24px;
+        .content-footer li {
+            font-size: 14px;
+        }
+        .deleteIsDoneItem {
+            color: $secondColor;
+            cursor: pointer;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+.deleteIsDoneItem {
+	color: $secondColor;
+	cursor: pointer;
+}
